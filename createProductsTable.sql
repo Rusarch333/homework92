@@ -12,5 +12,5 @@ CREATE TABLE IF NOT EXISTS "products"(
 INSERT INTO products
 VALUES 
   ('Harley-Davidson Street 750', 7499, '2023-06-01', 10, 'USD', true),
-  ('Yamaha MT-07', 7999.00, '2024-03-15', 5, 'USD', true),
+  ('Yamaha MT-07', 7999, '2024-03-15', 5, 'USD', true),
   ('Yamaha YZF-R3', 5299, '2024-01-15', 8, 'USD', false);
