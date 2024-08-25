@@ -1,11 +1,11 @@
 DROP TABLE IF EXISTS "products";
 
 CREATE TABLE IF NOT EXISTS "products"(
-  "name" varchar(64) NOT NULL UNIQUE CHECK(name!=''),
-  "price" numeric(7, 2) NOT NULL CHECK(price>=0 AND price<=10000),
+  "name" varchar(64) NOT NULL UNIQUE CHECK("name"!=''),
+  "price" numeric(7, 2) NOT NULL CHECK("price">=0 AND "price"<=10000),
   "dateProduction" date CHECK("dateProduction"<current_date),
-  "amount" smallint NOT NULL CHECK(amount>=0 AND amount<=1000) DEFAULT 0,
-  "currency" char(3) NOT NULL CHECK(name!='   ') DEFAULT 'UAH',
+  "amount" smallint NOT NULL CHECK("amount">=0 AND "amount"<=1000) DEFAULT 0,
+  "currency" char(3) NOT NULL CHECK("name"!='   ' AND length("currency")=3) DEFAULT 'UAH',
   "isAction" boolean NOT NULL DEFAULT false
 );
 
