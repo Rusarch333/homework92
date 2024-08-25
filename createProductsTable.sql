@@ -5,7 +5,7 @@ CREATE TABLE IF NOT EXISTS "products"(
   "price" numeric(7, 2) NOT NULL CHECK(price>=0 AND price<=10000),
   "dateProduction" date CHECK("dateProduction"<current_date),
   "amount" smallint NOT NULL CHECK(amount>=0 AND amount<=1000) DEFAULT 0,
-  "currency" char(3) NOT NULL DEFAULT 'UAH',
+  "currency" char(3) NOT NULL DEFAULT 'UAH' CHECK(name!='   '),
   "isAction" boolean NOT NULL DEFAULT false
 );
 
